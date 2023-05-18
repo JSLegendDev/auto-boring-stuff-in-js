@@ -28,3 +28,34 @@ console.log(phoneMatchObject[0]) // should print : 555-4242
 // If you need to match for ? in the string escape it like so \?
 
 // Matching zero or more with the star
+
+const batRegex3 = /Bat(wo)*man/
+console.log('The Adventures of Batman'.match(batRegex3))
+console.log('The Adventures of Batwoman'.match(batRegex3))
+console.log('The Adventures of Batwowowowoman'.match(batRegex3))
+
+// Matching one of move with the plus
+
+const batRegex4 = /Bat(wo)+man/
+console.log('The Adventures of Batwoman'.match(batRegex4))
+console.log('The Adventures of Batwowowowoman'.match(batRegex4))
+console.log('The Adventures of Batman'.match(batRegex4))
+
+// Matching specific repetitions with braces
+
+let haRegex = /(Ha){3}/
+console.log('HaHaHa'.match(haRegex))
+console.log('Ha'.match(haRegex))
+
+// Greedy and non-greedy matching
+
+// greedy matching takes the longest occurence possible.
+const greedyHaRegex = /(Ha){3,5}/
+console.log('HaHaHaHaHa'.match(greedyHaRegex))
+
+// question mark here has a different meaning unreleated to
+// flagging an optional group
+const nonGreedy = /(Ha){3,5}?/
+console.log('HaHaHaHaHa'.match(nonGreedy))
+
+// The matchAll() method
