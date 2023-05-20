@@ -57,5 +57,3 @@ console.log('HaHaHaHaHa'.match(greedyHaRegex))
 // flagging an optional group
 const nonGreedy = /(Ha){3,5}?/
 console.log('HaHaHaHaHa'.match(nonGreedy))
-
-// The matchAll() method
