@@ -38,3 +38,20 @@ console.log('<To serve man> for dinner.>')
 const text = 'Serve the public trust.\nProtect the innocent.\nUphold the law.'
 console.log(text.match(/.*/))
 console.log(text.match(/.*/s))
+
+// Case insensitive matching
+const robocop = /robocop/i
+console.log('ROBOCOP protects the innocent.'.match(robocop))
+
+// Substituting strings with the subs() method
+const namesRegex = /Agent \w+/g
+console.log(
+    'Agent Alice gave the secret documents to Agent Bob.'
+    .replace(namesRegex, 'CENSORED')
+)
+
+const agentNamesRegex = /Agent (\w)\w*/g
+console.log(
+    'Agent Alice told Agent Carol that Agent Eve knew Agent Bob was a double agent.'
+    .replace(agentNamesRegex, '$1****')
+)
