@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Automate The Boring Stuff in JavaScript Instead of Python",
   "keywords": [],
+  "type": "module",
   "author": "JSLegendDev",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "clipboardy": "^3.0.0"
+  }
 }
